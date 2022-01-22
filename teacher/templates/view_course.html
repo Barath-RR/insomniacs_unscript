@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+  {% for post_datas in post_data %}
+     <h1>{{ post_datas.id }}</h1>
+      <h3>{{ post_datas.title }}</h32>
+      <h3>{{ post_datas.description }}</h3>
+      <div class="col col-4" data-label="dataset_file">
+          {% if post_datas.dataset_file %}
+              <a href="{{ prob_stat.dataset_file }}">Dataset File</a>
+          {% else %}
+              No Dataset Submitted
+          {% endif %}</div>
+      <h3>{% if post_datas.youtube_link %}</h3>
+          <a href="{{ prob_stat.youtube_link }}">Link</a>
+      {% else %}
+          No URL Submitted
+      {% endif %}
+      </div>
+      <h3>{{ post_datas.category }}</h3>
+      <h3>{{ post_datas.domain_bucket }}</h3>
+      <h3>{{ post_datas.prize }}</h3> 
+{% endfor %}
+</body>
+</html>

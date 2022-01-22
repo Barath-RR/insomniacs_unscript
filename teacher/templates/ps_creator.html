@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <title>Problem statement submission</title>
+  </head>
+  <body style="background-color: rgb(255, 255, 255);">
+    <br />
+    <br />
+    <br />
+    <br />
+    <form class="needs-validation" novalidate method="POST">
+      {% csrf_token %}
+      <div class="container form-group">
+          <h1 style="text-align: center;">PROBLEM STATEMENT SUBMISSION</h1>
+          <br><br>
+        <input
+        style="background-color: rgba(218, 202, 202, 0.438);"
+          name="title"
+          class="form-control form-control-lg"
+          type="text"
+          maxlength="1000"
+          placeholder="Title"
+          required
+        />
+        <div class="invalid-feedback">Please provide an email address</div><br><br>
+
+        <div class="form-group">
+            <textarea class="form-control" style="background-color: rgba(218, 202, 202, 0.438);" rows="5" id="Description" maxlength="50000" placeholder="Description" name="des" required></textarea>
+            <div class="invalid-feedback">Please provide an email address</div>
+          </div>
+          <br>
+          <form method="POST">
+            {% csrf_token %}
+            <div class="form-row">
+              <div class="col">
+                <div class="input-group mb-3 form-control form-control-lg">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text " id="basic-addon3"></span>
+                    </div>
+                    <input
+                    style="background-color: rgba(218, 202, 202, 0.438);"
+                      type="text"
+                      class="form-control"
+                      id="basic-url"
+                      name="link"
+                      placeholder="Youtube link(If available)"
+                      aria-describedby="basic-addon3"
+                    />
+                  </div>
+              </div>
+          <br>
+            <div class="form-row">
+              <div class="col">
+                <div class="form-group">
+                    <select name="dombuck" class="form-control form-control-lg" style="background-color: rgba(218, 202, 202, 0.438);" id="sel1" required>
+                        <option value="" selected hidden >Domain bucket</option>
+                        <option value="Agriculture and Rural Development" >Agriculture and Rural Development</option>
+                        <option value="Clean Water" >Clean Water</option>                                                                           
+                        <option value="Robotics & Drones" >Robotics & Drones</option>                                                                     
+                        <option value="Healthcare & Biomedical Devices" >Healthcare & Biomedical Devices</option>                                                                             
+                        <option value="Energy / Renewable Energy" >Energy / Renewable Energy</option>                                                                            
+                        <option value="Security & Surveillance" >Security & Surveillance</option>                                                                             
+                        <option value="Smart Communication" >Smart Communication</option>      
+                        <option value="Smart Vehicles" >Smart Vehicles</option>      
+                        <option value="Software - Mobile App development" >Software - Mobile App development</option>      
+                        <option value="Miscellaneous" >Miscellaneous</option>       
+                        <option value="Software - Web App development" >Software - Web App development</option>       
+                        <option value="Travel and Tourism" >Travel and Tourism</option>      
+                        <option value="Finance" >Finance</option>       
+                        <option value="Life Sciences" >Life Sciences</option>      
+                        <option value="Waste Management" >Waste Management</option>        
+                        <option value="Food Technology" >Food Technology</option>        
+                        <option value="Smart Education" >Smart Education</option>        
+                        <option value="Smart Cities" >Smart Cities</option>        
+                        <option value="Sports and Fitness" >Sports and Fitness</option>
+                        <option value="Smart Textiles" >Smart Textiles</option>
+                        <option value="Sustainable Environment" >Sustainable Environment</option>
+                    </select>
+                    <div class="invalid-feedback">Please provide an email address</div>
+
+                  </div>
+              </div>
+              <br>
+              <input
+              style="background-color: rgba(218, 202, 202, 0.438);"
+                name="prize"
+                class="form-control form-control-lg"
+                type="text"
+                maxlength="1000"
+                placeholder="Prize"
+                required
+              />
+              <div class="invalid-feedback">Please provide an email address</div><br><br>
+           
+             <br>
+          <p style="font-weight: bold;">Datasets(If available):</p>
+                    <div class="container" style="width: 100%">
+                      <input type="file" name="datafile" class="form-control-file border"><br>
+          <input type="submit" style="margin-left: 330px;padding: auto ;" id="edit-submit" name="op" value="Submit "
+          class="form-control-login btn btn-success btn-lg"
+          >
+            <input style="margin-left: 50px;padding: auto ;"  type="submit" id="edit-submit" name="op" value="Reset "
+                       class="form-control-login btn btn-success btn-lg"
+                       >
+                       <input style="margin-left: 50px;padding: auto;"  type="button" id="edit-submit" name="op" value="Back to Login Page "
+                       class="form-control-login btn btn-success btn-lg"
+                       >
+
+                          </form>
+         </div>
+         </form>
+         
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous" >
+    </script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+      crossorigin="anonymous">
+    </script>
+    <script
+      src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous">
+    </script>
+    <script>
+        "use strict";
+        window.addEventListener(
+          "load",
+          function () {
+            var forms = document.getElementsByClassName("needs-validation");
+            var validation = Array.prototype.filter.call(
+              forms,
+              function (form) {
+                form.addEventListener(
+                  "submit",
+                  function (event) {
+                    if (form.checkValidity() === false) {
+                      event.preventDefault();
+                      event.stopPropagation();
+                    }
+                    form.classList.add("was-validated");
+                  },
+                  false
+                );
+              }
+            );
+          },
+          false
+        );
+    </script>
+  </body>
+</html>
